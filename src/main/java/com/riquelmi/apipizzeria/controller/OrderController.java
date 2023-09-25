@@ -1,6 +1,8 @@
 package com.riquelmi.apipizzeria.controller;
 
 import com.riquelmi.apipizzeria.service.OrderService;
+import com.riquelmi.apipizzeria.service.dto.RandomOrderDto;
+import com.riquelmi.apipizzeria.service.dto.UpdatePizzaPriceDto;
 import com.riquelmi.apipizzeria.utils.ResponseObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -64,4 +66,17 @@ public class OrderController {
         }
     }
 
+    @PostMapping("/ramdom")
+    public @ResponseBody ResponseObject ramdomOrder(@RequestBody RandomOrderDto dto){
+        try{
+            Boolean exito = this.orderService.saveRandomOrder(dto);
+            if(exito){
+                return new ResponseObject(ResponseObject.CODE_SUCCESS, ResponseObject.MSG_SUCCESS, null);
+            }else{
+                return new ResponseObject(ResponseObject.CODE_ERROR, ResponseObject.MSG_ERROR, null);
+            }
+        }catch (Exception e){
+            return new ResponseObject(ResponseObject.CODE_ERROR, ResponseObject.MSG_ERROR, null);
+        }
+    }
 }
