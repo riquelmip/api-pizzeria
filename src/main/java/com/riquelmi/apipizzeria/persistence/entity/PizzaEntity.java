@@ -13,7 +13,6 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "pizza")
-@EntityListeners({AuditingEntityListener.class, AuditPizzaListener.class})
 @Getter
 @Setter
 @NoArgsConstructor

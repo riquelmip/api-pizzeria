@@ -7,6 +7,7 @@ public final class ResponseObject {
     public static final String CODE_SUCCESS = "SUCCESS";
     public static final String CODE_ERROR = "ERROR";
     public static final String CODE_UNAUTHORIZED = "UNAUTHORIZED";
+    public static final String CODE_FORBIDDEN = "FORBIDDEN";
     public static final String CODE_NO_PARAMS = "NO_PARAMS";
     public static final String CODE_NOT_FOUND = "NOT_FOUND";
     public static final String CODE_LOGIC_ERROR = "LOGIC_ERROR";
@@ -20,6 +21,7 @@ public final class ResponseObject {
     public static final String MSG_SUCCESS = "Solicitud realizada";
     public static final String MSG_ERROR = "Se produjo un error en la solicitud";
     public static final String MSG_UNAUTHORIZED = "Sin autorización";
+    public static final String MSG_FORBIDDEN = "Sin autorización";
     public static final String MSG_NO_PARAMS = "No se recibieron los parametros necesarios";
     public static final String MSG_LOGIC_ERROR = "Error logico inesperado";
     public static final String MSG_BAD_REQUEST = "Solicitud incorrecta";
